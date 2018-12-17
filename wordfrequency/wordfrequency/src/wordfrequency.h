@@ -10,6 +10,8 @@ typedef struct wordfrequency{
 	int time;
 }Frequency;
 
+//extern List* list;
+
 extern void HandleWord(char* word, bool flag);
 
 extern int SearchWord(char* word, bool* flag);
@@ -25,6 +27,10 @@ extern int PositionToDictionary();
 extern int PositionToTimes();
 
 extern void InitList();
+
+extern void DestroyList();
+
+extern void PrintQuickSort(char* type);
 
 #endif
 

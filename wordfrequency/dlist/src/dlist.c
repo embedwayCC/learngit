@@ -20,7 +20,7 @@
 ****************************************************************************/
 List* CreateInitList()
 {
-	//openlog("CreateInitList_log", LOG_CONS | LOG_PID, LOG_USER);
+	openlog("CreateInitList_log", LOG_CONS | LOG_PID, LOG_USER);
 	List* list = (List*)malloc(sizeof(List));
 
 	if(!list)
@@ -30,10 +30,10 @@ List* CreateInitList()
 	list->tail = NULL;
 	list->size = 0;
 
-	//syslog(LOG_DEBUG,"%s L#%d create and init success\n", __func__, __LINE__);
+	syslog(LOG_DEBUG,"%s L#%d create and init success\n", __func__, __LINE__);
 	//DEBUG_LOG("%s L#%d create and init success\n", __func__, __LINE__);
 
-	//closelog();
+	closelog();
 	return list;
 }
 

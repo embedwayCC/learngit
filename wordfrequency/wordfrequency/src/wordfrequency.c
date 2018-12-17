@@ -28,6 +28,10 @@ void HandleWord(char* word, bool flag)
 {
 	openlog("HandleWord_log", LOG_CONS | LOG_PID, LOG_USER);
 	int i, j;
+	//char* word = (char*)malloc(strlen(temp));
+
+	//memcpy(word, temp,strlen(temp));
+	//printf("%s=====\n",word);
 	if(flag == 1)
 	{
 		//printf("ignore\n");
@@ -90,6 +94,8 @@ void HandleWord(char* word, bool flag)
 	syslog(LOG_DEBUG,"%s L#%d  %s\n", __func__, __LINE__, word);
 	closelog();
 	//printf("HandleWord\n");
+	//printf("%s=====+++\n",word);
+	//return word;
 }
 int SearchWord(char* word, bool* flag)
 {
@@ -141,6 +147,7 @@ int CountWordByPosition(char* word)
 		free(frequency);
 	}
 	closelog();
+	//free(word);
 	return 0;
 }
 int PrintResult()
@@ -317,6 +324,7 @@ Node* Partition(List* list, Node* low, Node* high, char* type)
 			{
 				high = high->prior;
 			}
+			//printf("%dlow----%dhigh\n",sizeof(((Frequency*)(low->data))->word),sizeof(((Frequency*)(high->data))->word));
 			strcpy(((Frequency*)(temp->data))->word, ((Frequency*)(low->data))->word);
 			strcpy(((Frequency*)(low->data))->word, ((Frequency*)(high->data))->word);
 			strcpy(((Frequency*)(high->data))->word, ((Frequency*)(temp->data))->word);
