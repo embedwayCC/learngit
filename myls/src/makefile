@@ -1,4 +1,4 @@
-LIB_NAME?=dlist
+LIB_NAME?=ls
 
 all:static_library shared_library
 
@@ -12,3 +12,4 @@ shared_library:
 clean:
 	rm *.o
 	rm *.a *.so
+
