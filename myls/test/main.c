@@ -91,10 +91,10 @@ int main(int argc, char* argv[])
 	strcpy(prog_name,argv[0]);
 	setup_fault_trap();
 	GetParam(argc, argv);
-	/*for(i=0;i<PARAM_NUM;i++)
+	
+	/*for(i=0;i<50;i++)
 	{
-		if(flags[i]==1)
-			printf("%d  ",i);
+		GetParam(argc, argv);
 	}*/
 
 	closelog();

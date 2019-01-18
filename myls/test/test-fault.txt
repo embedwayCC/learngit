@@ -1,0 +1,349 @@
+
+Time: 2019-01-04 07:55:51 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: -545093698
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7fc7df2a40e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7fc7df61c168]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7fc7df61bf68]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x75b) [0x7fc7df61bd91]
+   [5]:/home/debian/myls/src/libls.so(DoLs+0x1cc) [0x7fc7df61b802]
+   [6]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7fc7df61b623]
+   [7]:./test() [0x401046]
+   [8]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7fc7df290b45]
+   [9]:./test() [0x400b69]
+
+Time: 2019-01-04 07:56:27 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 66332476
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7fae063340e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7fae066ac16d]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7fae066abf6d]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x760) [0x7fae066abd96]
+   [5]:/home/debian/myls/src/libls.so(DoLs+0x1cc) [0x7fae066ab802]
+   [6]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7fae066ab623]
+   [7]:./test() [0x401046]
+   [8]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7fae06320b45]
+   [9]:./test() [0x400b69]
+
+Time: 2019-01-04 07:56:53 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 544040894
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f3e201520e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f3e204ca121]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7f3e204c9f21]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x760) [0x7f3e204c9d56]
+   [5]:/home/debian/myls/src/libls.so(DoLs+0x1cc) [0x7f3e204c97c2]
+   [6]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f3e204c95e3]
+   [7]:./test() [0x401046]
+   [8]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f3e2013eb45]
+   [9]:./test() [0x400b69]
+
+Time: 2019-01-04 07:58:33 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 1060173758
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7fb43ed8b0e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7fb43f103121]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7fb43f102f21]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x760) [0x7fb43f102d56]
+   [5]:/home/debian/myls/src/libls.so(DoLs+0x1cc) [0x7fb43f1027c2]
+   [6]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7fb43f1025e3]
+   [7]:./test() [0x401046]
+   [8]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7fb43ed77b45]
+   [9]:./test() [0x400b69]
+
+Time: 2019-01-04 07:59:08 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 562956128
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f9a2190b0e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f9a21c83121]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7f9a21c82f21]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x760) [0x7f9a21c82d56]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f9a21c825e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f9a218f7b45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 07:59:38 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 1736353726
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f0b672660e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f0b675de121]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7f0b675ddf21]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x760) [0x7f0b675ddd56]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f0b675dd5e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f0b67252b45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:01:27 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 66332476
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f9b9b2490e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f9b9b5c112d]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7f9b9b5c0f2d]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x76c) [0x7f9b9b5c0d62]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f9b9b5c05e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f9b9b235b45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:02:50 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: -600246432
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7fd9dc3ba0e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7fd9dc732139]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7fd9dc731f39]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x778) [0x7fd9dc731d6e]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7fd9dc7315e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7fd9dc3a6b45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:04:11 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 1302592512
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f208c3ad0e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f208c725139]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7f208c724f39]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x778) [0x7f208c724d6e]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f208c7245e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f208c399b45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:05:35 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: -658012320
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f23d8ca30e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f23d901b154]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7f23d901af54]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x793) [0x7f23d901ad89]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f23d901a5e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f23d8c8fb45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:09:53 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: -722151584
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f8dd4f780e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f8dd52f0170]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x10d) [0x7f8dd52eff70]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x7af) [0x7f8dd52efda5]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f8dd52ef5e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f8dd4f64b45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:10:46 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 66332476
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f813467c0e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f81349f4188]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x125) [0x7f81349f3f88]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x7af) [0x7f81349f3da5]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f81349f35e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f8134668b45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:11:56 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 1827514302
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f7b6c9560e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f7b6ccce188]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x125) [0x7f7b6cccdf88]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x7af) [0x7f7b6cccdda5]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f7b6cccd5e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f7b6c942b45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:38:45 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 66332476
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f5cc08200e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f5cc0b981fe]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x1b5) [0x7f5cc0b97ff2]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x108) [0x7f5cc0b976fe]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f5cc0b975e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f5cc080cb45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:39:01 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 1909098336
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f1a71cd30e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f1a7204b1fe]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x1b5) [0x7f1a7204aff2]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x836) [0x7f1a7204ae2c]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f1a7204a5e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f1a71cbfb45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:43:45 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 865732448
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7ff2339cb0e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7ff233d431fe]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x1b5) [0x7ff233d42ff2]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x836) [0x7ff233d42e2c]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7ff233d425e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7ff2339b7b45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:45:57 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 66332476
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7ff3fa7e30e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7ff3fab5b1fe]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x1b5) [0x7ff3fab5aff2]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x836) [0x7ff3fab5ae2c]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7ff3fab5a5e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7ff3fa7cfb45]
+   [8]:./test() [0x400b69]
+
+Time: 2019-01-04 08:54:22 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: 0
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7fb4550730e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x224) [0x7fb4553eb280]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x14c) [0x7fb4553eaf89]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x778) [0x7fb4553ead6e]
+   [5]:/home/debian/myls/src/libls.so(DoLs+0x1dd) [0x7fb4553ea7d3]
+   [6]:/home/debian/myls/src/libls.so(DoLs+0x2f7) [0x7fb4553ea8ed]
+   [7]:/home/debian/myls/src/libls.so(DoLs+0x2f7) [0x7fb4553ea8ed]
+   [8]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7fb4553ea5e3]
+   [9]:./test() [0x401046]
+   [10]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7fb45505fb45]
+   [11]:./test() [0x400b69]
+
+Time: 2019-01-04 08:56:09 UTC
+Siginfo: Signal Num: 11(n=11)
+         Fault Addr: (nil)
+           Error No: 0
+               Code: 1
+                Pid: 0
+                Uid: 1
+             Status: -1537230914
+   [0]:./test() [0x400e9d]
+   [1]:/lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f1ba40770e0]
+   [2]:/home/debian/myls/src/libls.so(LPrint+0x1cc) [0x7f1ba43ef1fe]
+   [3]:/home/debian/myls/src/libls.so(HandleFormat+0x1b5) [0x7f1ba43eeff2]
+   [4]:/home/debian/myls/src/libls.so(DoLs+0x108) [0x7f1ba43ee6fe]
+   [5]:/home/debian/myls/src/libls.so(GetParam+0x2e3) [0x7f1ba43ee5e3]
+   [6]:./test() [0x401046]
+   [7]:/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f1ba4063b45]
+   [8]:./test() [0x400b69]
