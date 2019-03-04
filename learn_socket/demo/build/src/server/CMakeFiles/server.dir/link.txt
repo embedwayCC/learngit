@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/server.dir/server.c.o  -o ../../../bin/server  -L/home/chencheng/learngit/learn_socket/demo/lib -rdynamic -Wl,-Bstatic -lwrap -Wl,-Bdynamic -Wl,-rpath,/home/chencheng/learngit/learn_socket/demo/lib 

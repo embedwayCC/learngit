@@ -14,7 +14,7 @@ int max(int a, int b)
 void str_cli(FILE *fp, int sockfd)
 {
 	/*char sendline[MAXLINE], recvline[MAXLINE];
-
+	
 	while(Fgets(sendline, MAXLINE, fp) != NULL)
 	{
 		Writen(sockfd, sendline, strlen(sendline));
@@ -43,7 +43,7 @@ void str_cli(FILE *fp, int sockfd)
 		FD_SET(sockfd, &rset);
 		maxfdpl = max(fileno(fp), sockfd) + 1;
 		select(maxfdpl, &rset, NULL, NULL, NULL);
-
+		
 		if(FD_ISSET(sockfd, &rset))
 		{
 			s = read(sockfd, recvline, MAXLINE);
@@ -81,18 +81,16 @@ int main(int argc, char **argv)
 	}
 
 	sockfd = Socket(AF_INET, SOCK_STREAM, 0);
-	
+
 	//printf("111111111\n");
 	bzero(&servaddr, sizeof(servaddr));
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_port = htons(SERV_PORT);
 	//printf("22222222222222\n");
 	inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
-
 	//printf("33333333333333333333\n");
 	Connect(sockfd, (SA *)&servaddr, sizeof(servaddr));
 	//printf("++++++++++++++++\n");
-
 	str_cli(stdin, sockfd);
 	exit(0);
 }

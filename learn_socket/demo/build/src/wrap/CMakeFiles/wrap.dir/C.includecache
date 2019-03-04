@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/include/wrap.h
+stdio.h
+-
+stdlib.h
+-
+errno.h
+-
+sys/socket.h
+-
+string.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+signal.h
+-
+unistd.h
+-
+
+/home/chencheng/learngit/learn_socket/demo/src/wrap/wrap.c
+wrap.h
+/home/chencheng/learngit/learn_socket/demo/src/wrap/wrap.h
+

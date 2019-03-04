@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../../../lib/libwrap.a  CMakeFiles/wrap.dir/wrap.c.o
+/usr/bin/ranlib ../../../lib/libwrap.a

@@ -1,0 +1,3 @@
+/home/chencheng/learngit/learn_socket/demo/build/src/client/CMakeFiles/client.dir
+/home/chencheng/learngit/learn_socket/demo/build/src/server/CMakeFiles/server.dir
+/home/chencheng/learngit/learn_socket/demo/build/src/wrap/CMakeFiles/wrap.dir
