@@ -1,0 +1,2 @@
+/home/chencheng/learngit/learn_cmake/cmake_demo/build/src/common/CMakeFiles/common.dir
+/home/chencheng/learngit/learn_cmake/cmake_demo/build/src/demo/CMakeFiles/demo.dir

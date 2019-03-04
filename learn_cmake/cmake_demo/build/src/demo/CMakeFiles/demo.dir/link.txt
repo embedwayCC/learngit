@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/demo.dir/demo_main.c.o  -o ../../../bin/demo  -L/home/chencheng/learngit/learn_cmake/cmake_demo/lib -rdynamic -Wl,-Bstatic -lcommon -Wl,-Bdynamic -Wl,-rpath,/home/chencheng/learngit/learn_cmake/cmake_demo/lib 
