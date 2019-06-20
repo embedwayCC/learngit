@@ -7,52 +7,6 @@
 #define LISTENQ 1024
 #define MAXEVENTS 256
 
-/*void str_echo(int sockfd)
-{
-	ssize_t n;
-	char buf[MAXLINE];
-
-again:
-	while((n = read(sockfd, buf, MAXLINE)) > 0)
-		Writen(sockfd, buf, n);
-
-	if(n < 0 && errno == EINTR)
-		goto again;
-	else if(n < 0)
-		printf("str_echo: read error\n");
-}
-
-void sig_chld(int signo)
-{
-	pid_t pid;
-	int stat;
-			
-	while((pid=waitpid(-1, &stat, WNOHANG)) > 0)
-		printf("child %d terminated.\n",pid);
-	return;
-}
-Sigfunc *Signal(int signo, Sigfunc *func)
-{
-	struct sigaction act, oact;
-		
-	act.sa_handler = func;
-	sigemptyset(&act.sa_mask);
-	act.sa_flags = 0;
-	if(signo==SIGALRM)
-	{
-#ifdef SA_INTERRUPT
-		act.sa_flags|=SA_INTERRUPT;
-#endif
-	}else{
-#ifdef SA_RESTART
-		act.sa_flags|=SA_RESTART;
-#endif
-	}
-	if(sigaction(signo,&act,&oact)<0)
-		return(SIG_ERR);
-	return(oact.sa_handler);
-}*/
-
 int make_socket_non_blocking (int sfd) 
 {
 	int flags = fcntl (sfd, F_GETFL, 0);
@@ -69,51 +23,6 @@ int make_socket_non_blocking (int sfd)
 
 int main(int argc, char** argv)
 {
-	/*int listenfd, connfd;
-	struct sockaddr_in cliaddr, servaddr;
-	socklen_t clilen;
-	pid_t childpid;
-
-	listenfd = Socket(AF_INET, SOCK_STREAM, 0);
-
-	// 解决在close之后会有一个WAIT_TIME，导致bind失败的问题
-	int val = 1;
-	int ret = setsockopt(listenfd,SOL_SOCKET,SO_REUSEADDR,(void *)&val,sizeof(int));
-	if(ret == -1)
-	{
-		printf("setsockopt\n");
-		exit(1);
-	}
-
-	bzero(&servaddr, sizeof(servaddr));
-	servaddr.sin_family = AF_INET;
-	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	servaddr.sin_port = htons(SERV_PORT);
-
-	Bind(listenfd, (SA *)&servaddr, sizeof(servaddr));
-	Listen(listenfd, LISTENQ);
-	//system("netstat -a | grep 9877 >> server.txt");
-
-	Signal(SIGCHLD, sig_chld);
-
-	printf("into server\n");
-
-	for( ; ; )
-	{
-		//printf("LISTEN!!!!!");
-		clilen = sizeof(cliaddr);
-		connfd = Accept(listenfd, (SA *)&cliaddr, &clilen);
-		//system("netstat -a | grep 9877 >> server.txt");
-		if((childpid = fork()) == 0)
-		{
-			Close(listenfd);
-			str_echo(connfd);
-			//system("netstat -a | grep 9877 >> server.txt");
-			exit(0);
-		}
-		Close(connfd);
-	}*/
-
 	int listenfd, connfd, epollfd;
 	struct epoll_event ev;
 	struct epoll_event events[MAXEVENTS];
@@ -216,7 +125,8 @@ int main(int argc, char** argv)
 							printf("Closed connection on descriptor %d\n", events[i].data.fd);
 							break;
 						}
-						s = write(1,buf,count);
+						//s = write(1,buf,count);
+						printf("buf=%s\n",buf);
 						if(s == -1)
 						{
 							perror("write");
@@ -229,7 +139,7 @@ int main(int argc, char** argv)
 					write(events[i].data.fd, buf, strlen(buf));
 					//ev.events = EPOLLOUT | EPOLLET;
 					//epoll_ctl(epollfd, EPOLL_CTL_MOD, events[i].data.fd, &ev);
-					printf("buf after loop=%s\n",buf);
+					//printf("buf after loop=%s\n",buf);
 				}
 			}
 			/*else if (events[i].events & EPOLLOUT) 

@@ -1,7 +1,11 @@
 #include "wrap.h"
+#include<fcntl.h>
+#include<sys/epoll.h>
+#include <time.h>
  
 #define MAXLINE 1024
 #define SERV_PORT 9877
+#define MAXEVENTS 256
 
 int max(int a, int b)
 {
@@ -13,60 +17,55 @@ int max(int a, int b)
 
 void str_cli(FILE *fp, int sockfd)
 {
-	/*char sendline[MAXLINE], recvline[MAXLINE];
+	int s, n, i, j;
+        ssize_t count;
+        char buf[MAXLINE];
+	int epollfd;
+	epollfd = epoll_create1(0);
+	if(epollfd == -1)
+	        perr_exit("epoll_create1");
+
+	struct epoll_event ev;
+	ev.events = EPOLLIN;
+	ev.data.fd = sockfd;
+	s = epoll_ctl(epollfd, EPOLL_CTL_ADD, sockfd, &ev);
+        if(s == -1)
+                perr_exit("epoll_ctl");
+
+        struct epoll_event events[MAXEVENTS];
+
+	memset(buf, 0, MAXLINE);
+        strcpy(buf,"hello,socket world!");
 	
-	while(Fgets(sendline, MAXLINE, fp) != NULL)
+        //clock_t start, stop;
+        // clock_t 是 clock() 函数返回的变量类型
+        //double duration = 0;
+	struct timeval t1,t2;
+
+	gettimeofday(&t1,NULL);
+	//start = clock();
+	for(j = 0; j < 10000; j++)
 	{
-		Writen(sockfd, sendline, strlen(sendline));
-		if(Readline(sockfd, recvline, MAXLINE) == 0)
+		write(sockfd, buf, strlen(buf));
+		n = epoll_wait(epollfd, events, MAXEVENTS, -1);
+		if ( n == -1 )
+			perr_exit( "epoll_wait" );
+		for(i = 0; i < n; i++)
 		{
-			printf("str_cli: server terminated prematurely\n");
-			exit(1);
-		}
-		Fputs(recvline,stdout);
-	}*/
-
-	int maxfdpl;
-	fd_set rset;
-	char sendline[MAXLINE], recvline[MAXLINE];
-	int s;
-	ssize_t t;
-
-	//printf("%d\n",sockfd);
-
-	FD_ZERO(&rset);
-	for( ; ; )
-	{
-		//memset(sendline, 0, MAXLINE);
-		//memset(recvline, 0, MAXLINE);
-		FD_SET(fileno(fp), &rset);
-		FD_SET(sockfd, &rset);
-		maxfdpl = max(fileno(fp), sockfd) + 1;
-		select(maxfdpl, &rset, NULL, NULL, NULL);
-		
-		if(FD_ISSET(sockfd, &rset))
-		{
-			s = read(sockfd, recvline, MAXLINE);
-			if(s == 0)
+			if(sockfd == events[i].data.fd)
 			{
-				printf("str_cli: server terminated prematurely\n");
-				close(sockfd);
-				break;
+				count = read(events[i].data.fd, buf, MAXLINE);
+				//write(events[i].data.fd, buf, strlen(buf));
 			}
-			printf("%d----\n",s);
-			//Fputs(recvline,stdout);
-			write(1,recvline,s);
-			memset(recvline, 0, MAXLINE);
 		}
-		if(FD_ISSET(fileno(fp), &rset))
-		{
-			if(Fgets(sendline, MAXLINE, fp) == NULL)
-				return;
-			s = write(sockfd, sendline, strlen(sendline));
-			printf("%d===\n",s);
-			memset(sendline, 0, MAXLINE);
-		}
+
 	}
+	gettimeofday(&t2,NULL);
+	long deltaT = (t2.tv_sec-t1.tv_sec) * 1000000 + t2.tv_usec-t1.tv_usec;
+	printf("time is %ld\n",deltaT);
+	//stop = clock();
+	//duration = (double)(stop - start)/CLOCKS_PER_SEC;
+	//printf("duration:%f\n",duration);
 }
 
 int main(int argc, char **argv)
@@ -82,15 +81,12 @@ int main(int argc, char **argv)
 
 	sockfd = Socket(AF_INET, SOCK_STREAM, 0);
 
-	//printf("111111111\n");
 	bzero(&servaddr, sizeof(servaddr));
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_port = htons(SERV_PORT);
-	//printf("22222222222222\n");
 	inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
-	//printf("33333333333333333333\n");
 	Connect(sockfd, (SA *)&servaddr, sizeof(servaddr));
-	//printf("++++++++++++++++\n");
 	str_cli(stdin, sockfd);
-	exit(0);
+	close(sockfd);
+	return 0;
 }
